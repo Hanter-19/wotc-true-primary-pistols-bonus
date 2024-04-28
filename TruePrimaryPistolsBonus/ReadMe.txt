@@ -1,8 +1,10 @@
-﻿[h1]True Primary Pistols Bonus[/h1]
-This is a patch and some value-added additions for [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2133399183]Musashi's True Primary Secondaries[/url] that gives a bonus when wielding Pistols/Autopistols in the primary weapon slot (without dual wielding).
+[h1]True Primary Pistols Bonus[/h1]
+Provide a configurable bonus for when pistols/autopistols are equipped in the primary weapon slot using True Primary Secondaries
 
 [h2]About[/h2]
-In the (both deprecated) [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1125431597]Primary Pistols[/url] or [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1142234205]Primary Secondaries[/url], there was a bonus to varios stats when wielding primary pistols.
+This is a patch and some value-added additions for [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2133399183]Musashi's True Primary Secondaries[/url] that gives a bonus when wielding Pistols/Autopistols in the primary weapon slot (without dual wielding).
+
+In the (both deprecated) [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1125431597]Primary Pistols[/url] or [url=https://steamcommunity.com/sharedfiles/filedetails/?id=1142234205]Primary Secondaries[/url], there was a bonus to various stats when wielding primary pistols.
 
 Possibly due to an oversight, this wasn't setup properly in True Primary Secondaries, even though most of the code is still there.
 
@@ -53,4 +55,4 @@ Yes, but there's an issue where I hardcoded the stat names in English for the ab
 	[*] [url=https://steamcommunity.com/id/Iridar/myworkshopfiles/?appid=268500]Iridar[/url] for helping me debug an issue I was facing while coding this mod, over at the [url=https://discord.gg/BdDAcchS5r]XCOM 2 Modding Discord Channel[/url]. I seriously can't understate how much he's done for the XCOM2 modding community over the years. In fact, here's a shameless plug for his [url=https://www.patreon.com/Iridar]Patreon[/url] page.
 [/list]
 
-Everyone has permission to reuse my code (which is also available on [url=https://github.com/Hanter-19]my github[/url]) or repackage it if necessary, especially if something breaks and I'm not actively modding XCOM 2 at the time. Just don't be a weirdo who reuploads other people's mods for internet clout??
+Everyone has permission to reuse my code (which is also available on [url=https://github.com/Hanter-19/wotc-true-primary-pistols-bonus]my github[/url]) or repackage it if necessary, especially if something breaks and I'm not actively modding XCOM 2 at the time. Just don't be a weirdo who reuploads other people's mods for internet clout??
