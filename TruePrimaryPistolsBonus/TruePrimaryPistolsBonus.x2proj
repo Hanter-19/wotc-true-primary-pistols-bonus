@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Default" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Guid>c695f2f2-a5e1-4271-aa87-505716c07f5a</Guid>
+    <Name>True Primary Pistols Bonus</Name>
+    <Description>Provide a configurable bonus for when pistols/autopistols are equipped in the primary weapon slot using True Primary Secondaries</Description>
+    <SteamPublishID>0</SteamPublishID>
+    <AssemblyName>TruePrimaryPistolsBonus</AssemblyName>
+    <RootNamespace>TruePrimaryPistolsBonus</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="Config\" />
+    <Folder Include="Localization\" />
+    <Folder Include="Src\" />
+    <Folder Include="Src\LoadoutApi_1_0_0" />
+    <Folder Include="Src\LoadoutApi_1_0_0\Classes" />
+    <Folder Include="Src\TruePrimaryPistolsBonus\" />
+    <Folder Include="Src\TruePrimaryPistolsBonus\Classes\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Config\XComTruePrimaryPistolsBonus.ini">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ReadMe.txt" />
+    <Content Include="ModPreview.jpg" />
+    <Content Include="Config\XComEditor.ini" />
+    <Content Include="Config\XComEngine.ini" />
+    <Content Include="Config\XComGame.ini" />
+    <Content Include="Localization\XComGame.int" />
+    <Content Include="Src\LoadoutApi_1_0_0\Classes\LoadoutApiFactory.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\LoadoutApi_1_0_0\Classes\LoadoutApiInterface.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\TruePrimaryPistolsBonus\Classes\X2Condition_PrimaryPistolNotDual.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\TruePrimaryPistolsBonus\Classes\X2DownloadableContentInfo_TruePrimaryPistolsBonus.uc" />
+    <Content Include="Src\TruePrimaryPistolsBonus\Classes\X2TemplateHelper_TruePrimaryPistolsBonus.uc">
+      <SubType>Content</SubType>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildLocalExtensionPath)\XCOM2.targets" />
+</Project>
