@@ -10,6 +10,39 @@
 
 class X2DownloadableContentInfo_TruePrimaryPistolsBonus extends X2DownloadableContentInfo;
 
+var config(Infiltration) int PRIMARY_PISTOL_INFIL_HOURS_ADDED;
+
+var localized string strHP;
+var localized string strAblativeHP;
+var localized string strArmor;
+var localized string strMobility;
+var localized string strPrimaryWeaponAim;
+var localized string strPrimaryWeaponCritChance;
+var localized string strAimWhenFlanking;
+var localized string strCritChanceWhenFlanking;
+var localized string strPrimaryWeaponDamage;
+var localized string strPrimaryWeaponCritDamage;
+var localized string strArmorPiercing;
+var localized string strWill;
+var localized string strDodge;
+var localized string strDefense;
+var localized string strHacking;
+var localized string strHackingDefense;
+var localized string strPsiStrength;
+var localized string strDetectionRadiusModifier;
+var localized string strDetectionRadius;
+var localized string strSightRadius;
+var localized string strSeeMovement;
+var localized string strHearingRadius;
+var localized string strStrength;
+var localized string strUtilityItems;
+var localized string strFlightFuel;
+var localized string strAlertLevel;
+var localized string strBackpackSize;
+var localized string strJob;
+
+var localized string strInfiltration;
+
 delegate ModifyTemplate(X2DataTemplate DataTemplate);
 
 // Highlander hook to modify the array returned by XComGameState_Unit:GetEarnedSoldierAbilities
@@ -44,147 +77,148 @@ static function bool AbilityTagExpandHandler(string InString, out string OutStri
 
 			if (class'X2Ability_TruePrimaryPistolsBonus'.default.bAFFECT_HP)
 			{
-				OutString $= "<br/><Bullet/>HP:" @ string(class'X2Ability_TruePrimaryPistolsBonus'.default.PRIMARY_PISTOL_BONUS_HP);
+				OutString $= default.strHP @ string(class'X2Ability_TruePrimaryPistolsBonus'.default.PRIMARY_PISTOL_BONUS_HP);
 			}
 
 			if (class'X2Ability_TruePrimaryPistolsBonus'.default.bAFFECT_SHIELDHP)
 			{
-				OutString $= "<br/><Bullet/>Ablative HP:" @ string(class'X2Ability_TruePrimaryPistolsBonus'.default.PRIMARY_PISTOL_BONUS_SHIELDHP);
+				OutString $= default.strAblativeHP @ string(class'X2Ability_TruePrimaryPistolsBonus'.default.PRIMARY_PISTOL_BONUS_SHIELDHP);
 			}
 
 			if (class'X2Ability_TruePrimaryPistolsBonus'.default.bAFFECT_ARMOR)
 			{
-				OutString $= "<br/><Bullet/>Armor:" @ string(class'X2Ability_TruePrimaryPistolsBonus'.default.PRIMARY_PISTOL_BONUS_ARMOR);
+				OutString $= default.strArmor @ string(class'X2Ability_TruePrimaryPistolsBonus'.default.PRIMARY_PISTOL_BONUS_ARMOR);
 			}
 
 			if (class'X2Ability_TruePrimaryPistolsBonus'.default.bAFFECT_MOBILITY)
 			{
-				OutString $= "<br/><Bullet/>Mobility:" @ string(class'X2Ability_TruePrimaryPistolsBonus'.default.PRIMARY_PISTOL_BONUS_MOBILITY);
+				OutString $= default.strMobility @ string(class'X2Ability_TruePrimaryPistolsBonus'.default.PRIMARY_PISTOL_BONUS_MOBILITY);
 			}
 
 			if (class'X2Ability_TruePrimaryPistolsBonus'.default.bAFFECT_AIM)
 			{
-				OutString $= "<br/><Bullet/>Primary Weapon Aim:" @ string(class'X2Ability_TruePrimaryPistolsBonus'.default.PRIMARY_PISTOL_BONUS_AIM);
+				OutString $= default.strPrimaryWeaponAim @ string(class'X2Ability_TruePrimaryPistolsBonus'.default.PRIMARY_PISTOL_BONUS_AIM);
 			}
 
 			if (class'X2Ability_TruePrimaryPistolsBonus'.default.bAFFECT_CRITCHANCE)
 			{
-				OutString $= "<br/><Bullet/>Primary Weapon Crit Chance:" @ string(class'X2Ability_TruePrimaryPistolsBonus'.default.PRIMARY_PISTOL_BONUS_CRITCHANCE);
+				OutString $= default.strPrimaryWeaponCritChance @ string(class'X2Ability_TruePrimaryPistolsBonus'.default.PRIMARY_PISTOL_BONUS_CRITCHANCE);
 			}
 
 			if (class'X2Ability_TruePrimaryPistolsBonus'.default.bAFFECT_FLANKINGAIM)
 			{
-				OutString $= "<br/><Bullet/>Aim when Flanking:" @ string(class'X2Ability_TruePrimaryPistolsBonus'.default.PRIMARY_PISTOL_BONUS_FLANKINGAIM);
+				OutString $= default.strAimWhenFlanking @ string(class'X2Ability_TruePrimaryPistolsBonus'.default.PRIMARY_PISTOL_BONUS_FLANKINGAIM);
 			}
 
 			if (class'X2Ability_TruePrimaryPistolsBonus'.default.bAFFECT_FLANKINGCRITCHANCE)
 			{
-				OutString $= "<br/><Bullet/>Crit Chance when Flanking:" @ string(class'X2Ability_TruePrimaryPistolsBonus'.default.PRIMARY_PISTOL_BONUS_FLANKINGCRITCHANCE);
+				OutString $= default.strCritChanceWhenFlanking @ string(class'X2Ability_TruePrimaryPistolsBonus'.default.PRIMARY_PISTOL_BONUS_FLANKINGCRITCHANCE);
 			}
 
 			if (class'X2Ability_TruePrimaryPistolsBonus'.default.bAFFECT_DAMAGE)
 			{
-				OutString $= "<br/><Bullet/>Primary Weapon Damage:" @ string(class'X2Ability_TruePrimaryPistolsBonus'.default.PRIMARY_PISTOL_BONUS_DAMAGE);
+				OutString $= default.strPrimaryWeaponDamage @ string(class'X2Ability_TruePrimaryPistolsBonus'.default.PRIMARY_PISTOL_BONUS_DAMAGE);
 			}
 
 			if (class'X2Ability_TruePrimaryPistolsBonus'.default.bAFFECT_CRIT_DAMAGE)
 			{
-				OutString $= "<br/><Bullet/>Primary Weapon Crit Damage:" @ string(class'X2Ability_TruePrimaryPistolsBonus'.default.PRIMARY_PISTOL_BONUS_CRIT_DAMAGE);
+				OutString $= default.strPrimaryWeaponCritDamage @ string(class'X2Ability_TruePrimaryPistolsBonus'.default.PRIMARY_PISTOL_BONUS_CRIT_DAMAGE);
 			}
 
 			if (class'X2Ability_TruePrimaryPistolsBonus'.default.bAFFECT_PIERCING)
 			{
-				OutString $= "<br/><Bullet/>Armor Piercing:" @ string(class'X2Ability_TruePrimaryPistolsBonus'.default.PRIMARY_PISTOL_BONUS_PIERCING);
+				OutString $= default.strArmorPiercing @ string(class'X2Ability_TruePrimaryPistolsBonus'.default.PRIMARY_PISTOL_BONUS_PIERCING);
 			}
 
 			if (class'X2Ability_TruePrimaryPistolsBonus'.default.bAFFECT_WILL)
 			{
-				OutString $= "<br/><Bullet/>Will:" @ string(class'X2Ability_TruePrimaryPistolsBonus'.default.PRIMARY_PISTOL_BONUS_WILL);
+				OutString $= default.strWill @ string(class'X2Ability_TruePrimaryPistolsBonus'.default.PRIMARY_PISTOL_BONUS_WILL);
 			}
 
 			if (class'X2Ability_TruePrimaryPistolsBonus'.default.bAFFECT_DODGE)
 			{
-				OutString $= "<br/><Bullet/>Dodge:" @ string(class'X2Ability_TruePrimaryPistolsBonus'.default.PRIMARY_PISTOL_BONUS_DODGE);
+				OutString $= default.strDodge @ string(class'X2Ability_TruePrimaryPistolsBonus'.default.PRIMARY_PISTOL_BONUS_DODGE);
 			}
 
 			if (class'X2Ability_TruePrimaryPistolsBonus'.default.bAFFECT_DEFENSE)
 			{
-				OutString $= "<br/><Bullet/>Defense:" @ string(class'X2Ability_TruePrimaryPistolsBonus'.default.PRIMARY_PISTOL_BONUS_DEFENSE);
+				OutString $= default.strDefense @ string(class'X2Ability_TruePrimaryPistolsBonus'.default.PRIMARY_PISTOL_BONUS_DEFENSE);
 			}
 
 			if (class'X2Ability_TruePrimaryPistolsBonus'.default.bAFFECT_HACKING)
 			{
-				OutString $= "<br/><Bullet/>Hacking:" @ string(class'X2Ability_TruePrimaryPistolsBonus'.default.PRIMARY_PISTOL_BONUS_HACKING);
+				OutString $= default.strHacking @ string(class'X2Ability_TruePrimaryPistolsBonus'.default.PRIMARY_PISTOL_BONUS_HACKING);
 			}
 
 			if (class'X2Ability_TruePrimaryPistolsBonus'.default.bAFFECT_HACKINGDEFENSE)
 			{
-				OutString $= "<br/><Bullet/>Hacking Defense:" @ string(class'X2Ability_TruePrimaryPistolsBonus'.default.PRIMARY_PISTOL_BONUS_HACKINGDEFENSE);
+				OutString $= default.strHackingDefense @ string(class'X2Ability_TruePrimaryPistolsBonus'.default.PRIMARY_PISTOL_BONUS_HACKINGDEFENSE);
 			}
 
 			if (class'X2Ability_TruePrimaryPistolsBonus'.default.bAFFECT_PSI)
 			{
-				OutString $= "<br/><Bullet/>Psi Strength:" @ string(class'X2Ability_TruePrimaryPistolsBonus'.default.PRIMARY_PISTOL_BONUS_PSI);
+				OutString $= default.strPsiStrength @ string(class'X2Ability_TruePrimaryPistolsBonus'.default.PRIMARY_PISTOL_BONUS_PSI);
 			}
 
 			if (class'X2Ability_TruePrimaryPistolsBonus'.default.bAFFECT_DETECTIONMODIFIER)
 			{
-				OutString $= "<br/><Bullet/>Detection Radius Modifier:" @ string(class'X2Ability_TruePrimaryPistolsBonus'.default.PRIMARY_PISTOL_BONUS_DETECTIONMODIFIER);
+				OutString $= default.strDetectionRadiusModifier @ string(class'X2Ability_TruePrimaryPistolsBonus'.default.PRIMARY_PISTOL_BONUS_DETECTIONMODIFIER);
 			}
 
 			if (class'X2Ability_TruePrimaryPistolsBonus'.default.bAFFECT_DETECTIONRADIUS)
 			{
-				OutString $= "<br/><Bullet/>Detection Radius:" @ string(class'X2Ability_TruePrimaryPistolsBonus'.default.PRIMARY_PISTOL_BONUS_DETECTIONRADIUS);
+				OutString $= default.strDetectionRadius @ string(class'X2Ability_TruePrimaryPistolsBonus'.default.PRIMARY_PISTOL_BONUS_DETECTIONRADIUS);
 			}
 
 			if (class'X2Ability_TruePrimaryPistolsBonus'.default.bAFFECT_SIGHTRADIUS)
 			{
-				OutString $= "<br/><Bullet/>Sight Radius:" @ string(class'X2Ability_TruePrimaryPistolsBonus'.default.PRIMARY_PISTOL_BONUS_SIGHTRADIUS);
+				OutString $= default.strSightRadius @ string(class'X2Ability_TruePrimaryPistolsBonus'.default.PRIMARY_PISTOL_BONUS_SIGHTRADIUS);
 			}
 
 			if (class'X2Ability_TruePrimaryPistolsBonus'.default.bAFFECT_SEEMOVEMENT)
 			{
-				OutString $= "<br/><Bullet/>See Movement:" @ string(class'X2Ability_TruePrimaryPistolsBonus'.default.PRIMARY_PISTOL_BONUS_SEEMOVEMENT);
+				OutString $= default.strSeeMovement @ string(class'X2Ability_TruePrimaryPistolsBonus'.default.PRIMARY_PISTOL_BONUS_SEEMOVEMENT);
 			}
 
 			if (class'X2Ability_TruePrimaryPistolsBonus'.default.bAFFECT_HEARINGRADIUS)
 			{
-				OutString $= "<br/><Bullet/>Hearing Radius:" @ string(class'X2Ability_TruePrimaryPistolsBonus'.default.PRIMARY_PISTOL_BONUS_HEARINGRADIUS);
+				OutString $= default.strHearingRadius @ string(class'X2Ability_TruePrimaryPistolsBonus'.default.PRIMARY_PISTOL_BONUS_HEARINGRADIUS);
 			}
 
 			if (class'X2Ability_TruePrimaryPistolsBonus'.default.bAFFECT_STRENGTH)
 			{
-				OutString $= "<br/><Bullet/>Strength:" @ string(class'X2Ability_TruePrimaryPistolsBonus'.default.PRIMARY_PISTOL_BONUS_STRENGTH);
+				OutString $= default.strStrength @ string(class'X2Ability_TruePrimaryPistolsBonus'.default.PRIMARY_PISTOL_BONUS_STRENGTH);
 			}
 
 			if (class'X2Ability_TruePrimaryPistolsBonus'.default.bAFFECT_UTILITYITEMS)
 			{
-				OutString $= "<br/><Bullet/>Utility Items:" @ string(class'X2Ability_TruePrimaryPistolsBonus'.default.PRIMARY_PISTOL_BONUS_UTILITYITEMS);
+				OutString $= default.strUtilityItems @ string(class'X2Ability_TruePrimaryPistolsBonus'.default.PRIMARY_PISTOL_BONUS_UTILITYITEMS);
 			}
 
 			if (class'X2Ability_TruePrimaryPistolsBonus'.default.bAFFECT_FLIGHTFUEL)
 			{
-				OutString $= "<br/><Bullet/>Flight Fuel:" @ string(class'X2Ability_TruePrimaryPistolsBonus'.default.PRIMARY_PISTOL_BONUS_FLIGHTFUEL);
+				OutString $= default.strFlightFuel @ string(class'X2Ability_TruePrimaryPistolsBonus'.default.PRIMARY_PISTOL_BONUS_FLIGHTFUEL);
 			}
 
 			if (class'X2Ability_TruePrimaryPistolsBonus'.default.bAFFECT_ALERTLEVEL)
 			{
-				OutString $= "<br/><Bullet/>Alert Level:" @ string(class'X2Ability_TruePrimaryPistolsBonus'.default.PRIMARY_PISTOL_BONUS_ALERTLEVEL);
+				OutString $= default.strAlertLevel @ string(class'X2Ability_TruePrimaryPistolsBonus'.default.PRIMARY_PISTOL_BONUS_ALERTLEVEL);
 			}
 
 			if (class'X2Ability_TruePrimaryPistolsBonus'.default.bAFFECT_BACKPACKSIZE)
 			{
-				OutString $= "<br/><Bullet/>Backpack Size:" @ string(class'X2Ability_TruePrimaryPistolsBonus'.default.PRIMARY_PISTOL_BONUS_BACKPACKSIZE);
+				OutString $= default.strBackpackSize @ string(class'X2Ability_TruePrimaryPistolsBonus'.default.PRIMARY_PISTOL_BONUS_BACKPACKSIZE);
 			}
 
 			if (class'X2Ability_TruePrimaryPistolsBonus'.default.bAFFECT_JOB)
 			{
-				OutString $= "<br/><Bullet/>Job:" @ string(class'X2Ability_TruePrimaryPistolsBonus'.default.PRIMARY_PISTOL_BONUS_JOB);
+				OutString $= default.strJob @ string(class'X2Ability_TruePrimaryPistolsBonus'.default.PRIMARY_PISTOL_BONUS_JOB);
 			}
 
 			if (IsDLCLoaded('CovertInfiltration'))
 			{
 				`LOG(GetFuncName() @ "Covert Infiltration Mod detected", class'X2Ability_TruePrimaryPistolsBonus'.default.bLOG, 'TruePrimaryPistolsBonus');
+				OutString $= default.strInfiltration @ string(default.PRIMARY_PISTOL_INFIL_HOURS_ADDED);
 				// TODO: figure out how to dynamically fetch the Infiltration modifier
 				//AbilityTemplateManager = class'X2AbilityTemplateManager'.static.GetAbilityTemplateManager();
 				//PrimaryPistolBonusAbility = AbilityTemplateManager.FindAbilityTemplate('HanterPrimaryPistolsBonus');

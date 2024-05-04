@@ -14,6 +14,7 @@
 - Crit Damage now supported
     - Default disabled
 - Applicable stat modifiers will now show in the Armory UI
+- All text can now be localized
 
 # 1.0.0
 - Equipping pistols or autopistols in the primary weapon slot (without dual wielding) grants the following bonuses:
