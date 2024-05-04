@@ -10,6 +10,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Folder Include="Config\" />
+    <Folder Include="Config\Compatibility" />
     <Folder Include="Localization\" />
     <Folder Include="Src\" />
     <Folder Include="Src\LoadoutApi_1_0_0" />
@@ -18,7 +19,13 @@
     <Folder Include="Src\TruePrimaryPistolsBonus\Classes\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Config\Compatibility\XComInfiltration.ini">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="Config\XComTruePrimaryPistolsBonus.ini">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Localization\TruePrimaryPistolsBonus.int">
       <SubType>Content</SubType>
     </Content>
     <Content Include="ReadMe.txt" />
@@ -33,11 +40,11 @@
     <Content Include="Src\LoadoutApi_1_0_0\Classes\LoadoutApiInterface.uc">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="Src\TruePrimaryPistolsBonus\Classes\X2Condition_PrimaryPistolNotDual.uc">
+    <Content Include="Src\TruePrimaryPistolsBonus\Classes\X2Ability_TruePrimaryPistolsBonus.uc">
       <SubType>Content</SubType>
     </Content>
     <Content Include="Src\TruePrimaryPistolsBonus\Classes\X2DownloadableContentInfo_TruePrimaryPistolsBonus.uc" />
-    <Content Include="Src\TruePrimaryPistolsBonus\Classes\X2TemplateHelper_TruePrimaryPistolsBonus.uc">
+    <Content Include="Src\TruePrimaryPistolsBonus\Classes\X2Effect_PrimaryPistolBonus.uc">
       <SubType>Content</SubType>
     </Content>
   </ItemGroup>
