@@ -3,15 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # XCOM ModBuddy Solution File, Format Version 11.00
 VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{5DAE07AF-E217-45C1-8DE7-FF99D6011E8A}") = "TruePrimaryPistolsBonus", "TruePrimaryPistolsBonus\TruePrimaryPistolsBonus.x2proj", "{21D5A1DF-750C-4CDF-820B-77A46DEC6127}"
+Project("{5DAE07AF-E217-45C1-8DE7-FF99D6011E8A}") = "TruePrimaryPistolsBonus", "TruePrimaryPistolsBonus\TruePrimaryPistolsBonus.x2proj", "{AC427D04-A145-4FE8-93FF-3B4DD271FAF8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Default|XCOM 2 = Default|XCOM 2
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{21D5A1DF-750C-4CDF-820B-77A46DEC6127}.Default|XCOM 2.ActiveCfg = Default|XCOM 2
-		{21D5A1DF-750C-4CDF-820B-77A46DEC6127}.Default|XCOM 2.Build.0 = Default|XCOM 2
+		{AC427D04-A145-4FE8-93FF-3B4DD271FAF8}.Default|XCOM 2.ActiveCfg = Default|XCOM 2
+		{AC427D04-A145-4FE8-93FF-3B4DD271FAF8}.Default|XCOM 2.Build.0 = Default|XCOM 2
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
